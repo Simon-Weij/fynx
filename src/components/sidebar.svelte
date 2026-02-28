@@ -38,10 +38,10 @@
   onresize={() => (windowWidth = window.innerWidth)}
 />
 
-<div class="flex border-black border-3">
+<div class="flex">
   <aside
     style="width: {widthPercent}vw"
-    class="bg-[#A2A1A1] min-h-screen flex flex-col"
+    class="bg-[#A2A1A1] min-h-screen flex flex-col rounded-r-xl"
   >
     <h1 class="text-black text-center text-4xl font-bold mt-2.5">Fynx</h1>
 
@@ -65,7 +65,7 @@
   <button
     type="button"
     aria-label="Resize sidebar"
-    class="w-1 p-0 bg-gray-400 border-none cursor-col-resize hover:bg-gray-600"
+    class="w-1 p-0 my-2 bg-transparent border-none rounded-full cursor-col-resize"
     onmousedown={onMouseDown}
   ></button>
 </div>

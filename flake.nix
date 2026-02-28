@@ -20,6 +20,7 @@
         shellHook = pkgs: ''
           export XDG_DATA_DIRS="$GSETTINGS_SCHEMAS_PATH"
           export RUST_SRC_PATH="${pkgs.rustPlatform.rustLibSrc}";
+          export IBUS_USE_PORTAL=1
         '';
       };
     };

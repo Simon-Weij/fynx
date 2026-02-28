@@ -5,6 +5,12 @@
 <script>
   let { children } = $props();
   import "../app.css";
+  import Sidebar from "../components/sidebar.svelte";
 </script>
 
-{@render children()}
+<main class="flex min-h-screen w-screen">
+  <Sidebar />
+  <div class="flex-1 min-w-0">
+    {@render children()}
+  </div>
+</main>

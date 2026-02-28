@@ -2,6 +2,9 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 
-<main class="container">
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
-</main>
+<script>
+  let { children } = $props();
+  import "../app.css";
+</script>
+
+{@render children()}

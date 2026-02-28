@@ -48,15 +48,17 @@
     <hr class="mx-2 my-2 border-gray-600" />
 
     <div class="flex flex-col gap-1 px-2">
-      <button
+      <a
+        href="/"
         class="flex items-center gap-2 px-3 py-2 font-bold text-left text-black rounded cursor-pointer hover:bg-gray-500"
-        ><HomeIcon />Home</button
+        ><HomeIcon />Home</a
       >
-      <button
+      <a
+        href="/settings"
         class="flex items-center gap-2 px-3 py-2 font-bold text-left text-black rounded cursor-pointer hover:bg-gray-500"
       >
         <SettingsIcon />Settings
-      </button>
+      </a>
     </div>
   </aside>
 

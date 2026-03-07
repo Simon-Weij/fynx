@@ -1,21 +1,33 @@
 <script lang="ts">
   let { children } = $props();
-  import "../app.css";
+  import '../app.css';
+  import { onMount } from 'svelte';
+  import Sidebar from '../components/sidebar.svelte';
 
-  const params = new URLSearchParams(window.location.search);
-  const isDark =
-    params.get("theme") === "dark" ||
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  document.documentElement.classList.toggle("dark", isDark);
-
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      document.documentElement.classList.toggle("dark", e.matches);
-    });
+  onMount(() => {
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', (e) => {
+        document.documentElement.classList.toggle('dark', e.matches);
+      });
+  });
 </script>
 
-<main class="bg-white dark:bg-black h-screen">
-  {@render children()}
-</main>
+<div class="flex h-screen bg-[#d4d4d4] dark:bg-[#0a0a0a] dark:text-[#d4d4d4]">
+  <div class="w-[15vw]">
+    <Sidebar
+      items={[
+        { label: 'Home', href: '/' },
+        { label: 'Settings', href: '/settings' },
+      ]}
+      user={{
+        name: 'User',
+        avatarUrl: 'http://ui-avatars.com/api/?name=User&background=random',
+      }}
+    />
+  </div>
+
+  <div class="flex-1 overflow-y-auto">
+    {@render children()}
+  </div>
+</div>

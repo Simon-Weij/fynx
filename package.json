@@ -16,12 +16,15 @@
 		"tailwindcss": "^4.2.1"
 	},
 	"devDependencies": {
+		"@eslint/js": "^10.0.1",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/vite-plugin-svelte": "^5.0.1",
 		"@types/bun": "latest",
 		"concurrently": "^9.1.0",
+		"prettier": "^3.8.1",
 		"svelte": "^5.14.1",
 		"typescript": "^5.7.2",
+		"typescript-eslint": "^8.56.1",
 		"vite": "^6.0.3"
 	}
 }

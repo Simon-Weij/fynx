@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const isDark =
+        params.get('theme') === 'dark' ||
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', isDark);
+    </script>
     %sveltekit.head%
   </head>
   <body>
-    <div id="svelte">%sveltekit.body%</div>
+    <div style="display: contents">
+      %sveltekit.body%
+    </div>
   </body>
 </html>

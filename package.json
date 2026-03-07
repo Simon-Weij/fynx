@@ -11,7 +11,9 @@
 	},
 	"dependencies": {
 		"@sveltejs/kit": "^2.53.4",
-		"electrobun": "1.15.1"
+		"@tailwindcss/vite": "^4.2.1",
+		"electrobun": "1.15.1",
+		"tailwindcss": "^4.2.1"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
